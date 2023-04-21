@@ -32,7 +32,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    /* padding-left: 1rem; */
+    padding-left: 1rem;
     transition: .3s;
 }
 
@@ -95,6 +95,7 @@ body {
 
 #sidebar-show:checked+.sidebar {
     width: 70px;
+    padding-left: 0;
 }
 
 #sidebar-show:checked+.sidebar li a {
@@ -110,7 +111,8 @@ body {
 }
 
 
-#sidebar-show:checked~.main-content header {
+#sidebar-show:checked~.main-content header,
+#sidebar-show:checked~.main-content main {
     width: calc(100% - 70px);
     left: 70px;
 }
@@ -139,6 +141,7 @@ header {
     width: calc(100% - 345px);
     transition: all .3s;
     background: #f1f5f8;
+    z-index: 200;
 }
 
 .header-title {
@@ -221,9 +224,14 @@ header {
 
 main {
     margin-top: 80px;
-    /* height: calc(100vh - 80px); */
-    /* background: rgba(255, 0, 0, 0.379); */
+    height: calc(100vh - 80px);
+    background: rgba(255, 0, 0, 0.379);
     padding: 2rem 1.5rem;
+    position: fixed;
+    overflow: auto;
+    right: 0;
+    left: 345px;
+    transition: .3s;
 }
 
 .cards {
@@ -266,7 +274,7 @@ main {
 .main-grid {
     margin-top: 2.5rem;
     display: grid;
-    grid-template-columns: 64% auto;
+    grid-template-columns: 60% auto;
     gap: 2rem;
     align-items: start;
 }
@@ -295,6 +303,7 @@ main {
     border: 1px solid var(--main-color);
     transition: .3s;
     /* font-weight: bold; */
+    font-size: .9rem;
 }
 
 .grid-header a:hover {
@@ -308,26 +317,31 @@ main {
 }
 
 .table-responsive {
-    width: 100%;
-    border-collapse: collapse;
     text-align: left;
-    overflow-x: auto;
+    overflow-x: scroll;
+}
+
+table {
+    width: 100%;
+    /* min-width: 500px; */
 }
 
 table th {
     border-bottom: 1px solid #e0e0e0;
+    font-size: .9rem;
 }
 
-table th:last-child {
-    width: 160px;
-}
+/* table th:last-child {
+    width: 140px;
+} */
 
 table th, td {
     padding: .5rem;
 }
 
 table td {
-    color: #666
+    color: #666;
+    font-size: .99rem;
 }
 
 table td:last-child span {
@@ -356,9 +370,9 @@ table td:last-child span.yellow {
 .customers {
     display: flex;
     flex-direction: column;
-    gap: .6rem;
+    gap: 1.2rem;
     margin-top: .7rem;
-    padding-bottom: .8rem;
+    padding-bottom: .7rem;
 }
 
 .customer {
@@ -387,7 +401,7 @@ table td:last-child span.yellow {
 .customer-info h4 {
     font-weight: 600;
     color: #333;
-    font-size: 14px;
+    font-size: .8rem;
 }
 
 .customer-info small {
@@ -404,4 +418,158 @@ table td:last-child span.yellow {
 
 .customer-contact i:hover {
     color: var(--text-gray)
+}
+
+@media screen and (max-width: 1200px) {
+
+    #sidebar-show,
+    .sidebar .sidebar-brand span:last-child,
+    .sidebar li span:last-child {
+        display: none;
+    }
+
+    .sidebar {
+        width: 70px;
+        padding-left: 0;
+        z-index: 300;
+    }
+
+    .sidebar li a {
+        text-align: center;
+    }
+
+    .sidebar .sidebar-brand {
+        text-align: center;
+    }
+
+    .main-content {
+        margin-left: 70px;
+    }
+
+
+    .main-content header,
+    .main-content main {
+        width: calc(100% - 70px);
+        left: 70px;
+    }
+
+    .main-content .cards {
+        gap: 2rem;
+    }
+
+    .sidebar:hover .sidebar-brand span:last-child,
+    .sidebar:hover li span:last-child {
+        display: inline-block;
+    }
+
+    .sidebar:hover {
+        width: 345px;
+        padding-left: 1rem;
+    }
+
+    .sidebar:hover li a {
+        text-align: left;
+    }
+
+    .sidebar:hover .sidebar-brand {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 1060px) {
+    .main-grid {
+        grid-template-columns: 55% auto;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .main-grid {
+        grid-template-columns: 50% auto;
+    }
+
+    table td {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    main {
+        left: 0 !important;
+        width: 100% !important;
+    }
+
+    .main-grid {
+        grid-template-columns: 100%;
+    }
+
+    .header-search {
+        display: none;
+    }
+
+    .sidebar {
+        left: -100%;
+    }
+
+    header {
+        width: 100% !important;
+        left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    #sidebar-show:checked+.sidebar {
+        left: 0;
+        width: 345px;
+        z-index: 100;
+    }
+
+    #sidebar-show:checked+.sidebar .sidebar-brand span:last-child,
+    #sidebar-show:checked+.sidebar li span:last-child {
+        display: inline-block;
+    }
+
+    #sidebar-show:checked+.sidebar {
+        width: 345px;
+        padding-left: 1rem;
+    }
+
+    #sidebar-show:checked+.sidebar li a {
+        text-align: left;
+    }
+
+    #sidebar-show:checked+.sidebar .sidebar-brand {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .cards {
+        grid-template-columns: 100%;
+        gap: .8rem !important;
+    }
+
+    .header-title h3 {
+        font-size: 1.2rem;
+    }
+
+    .header-user-info h4 {
+        font-size: .9rem;
+    }
+
+    .header-user-info small {
+        font-size: .7rem;
+    }
+
+
+    .header-title i {
+        font-size: 1.1rem;
+    }
 }
