@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <input type="checkbox" id="sidebar-show">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h1>
+                <span class="logo">R</span>
+                <span>Robiul</span>
+            </h1>
+        </div>
+        <ul>
+            <li><a href="" class="active">
+                    <span><i class="fa-solid fa-igloo"></i></span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <span><i class="fa-solid fa-users"></i></span>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <span><i class="fa-solid fa-list-check"></i></span>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    <span>Orders</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <span><i class="fa-solid fa-receipt"></i></span>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <span><i class="fa-solid fa-user-circle"></i></span>
+                    <span>Accounts</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <span><i class="fa-solid fa-clipboard-list"></i></span>
+                    <span>Tasks</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-title">
+                <label for="sidebar-show">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </label>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="header-search">
+                <input type="search" placeholder="Search here">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class="header-user">
+                <img src="./icon.jpg" class="" alt="">
+                <div class="header-user-info">
+                    <h4>John Doe</h4>
+                    <small>Super Admin</small>
+                </div>
+
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <div class="card-single">
+                    <div class="card-left">
+                        <h1>54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <span><i class="fa-solid fa-users"></i></span>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-left">
+                        <h1>79</h1>
+                        <span>Projects</span>
+                    </div>
+                    <span><i class="fa-solid fa-clapperboard"></i></span>
+                </div>
+
+                <div class="card-single">
+                    <div class="card-left">
+                        <h1>125</h1>
+                        <span>Orders</span>
+                    </div>
+                    <span><i class="fa-solid fa-bag-shopping"></i></span>
+                </div>
+
+
+                <div class="card-single">
+                    <div class="card-left">
+                        <h1>8K</h1>
+                        <span>Earnings</span>
+                    </div>
+                    <span><i class="fa-solid fa-dollar-sign"></i></span>
+                </div>
+            </div>
+
+            <div class="main-grid">
+                <div class="recent-grid">
+                    <div class="grid-header">
+                        <h3>Recent Projects</h3>
+                        <a href="#"> See all <i class="fa-solid fa-arrow-circle-right"></i></a>
+                    </div>
+                    <div class="grid-body">
+                        <table class="table-responsive">
+                            <thead>
+                                <th>Project Title</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="purple"></span>
+                                        review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="red"></span>
+                                        pending
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="yellow"></span>
+                                        in progress
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="purple"></span>
+                                        review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="red"></span>
+                                        pending
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="yellow"></span>
+                                        in progress
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="purple"></span>
+                                        review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="red"></span>
+                                        pending
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="yellow"></span>
+                                        in progress
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="purple"></span>
+                                        review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="red"></span>
+                                        pending
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="yellow"></span>
+                                        in progress
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="purple"></span>
+                                        review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="red"></span>
+                                        pending
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="yellow"></span>
+                                        in progress
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="purple"></span>
+                                        review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="red"></span>
+                                        pending
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="yellow"></span>
+                                        in progress
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="purple"></span>
+                                        review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="red"></span>
+                                        pending
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UI/UX Design</td>
+                                    <td>UI Team</td>
+                                    <td>
+                                        <span class="yellow"></span>
+                                        in progress
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="customers-grid">
+                    <div class="grid-header">
+                        <h3>New Customer</h3>
+                        <a href="#"> See all <i class="fa-solid fa-arrow-circle-right"></i></a>
+                    </div>
+                    <div class="grid-body"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
