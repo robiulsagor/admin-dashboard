@@ -33,7 +33,7 @@ body {
     top: 0;
     left: 0;
     /* padding-left: 1rem; */
-    transition: .2s;
+    transition: .3s;
 }
 
 .sidebar-brand {
@@ -221,8 +221,8 @@ header {
 
 main {
     margin-top: 80px;
-    height: calc(100vh - 80px);
-    background: rgba(255, 0, 0, 0.379);
+    /* height: calc(100vh - 80px); */
+    /* background: rgba(255, 0, 0, 0.379); */
     padding: 2rem 1.5rem;
 }
 
@@ -261,4 +261,147 @@ main {
 
 .card-left span {
     color: #556;
+}
+
+.main-grid {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 64% auto;
+    gap: 2rem;
+    align-items: start;
+}
+
+.recent-grid, .customers-grid {
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 1.5rem;
+}
+
+.grid-header {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e6e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: .7rem; */
+}
+
+.grid-header a {
+    background: var(--main-color);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem .6rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    transition: .3s;
+    /* font-weight: bold; */
+}
+
+.grid-header a:hover {
+    background: #fff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.grid-body {
+    padding: .3rem;
+}
+
+.table-responsive {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    overflow-x: auto;
+}
+
+table th {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table th:last-child {
+    width: 160px;
+}
+
+table th, td {
+    padding: .5rem;
+}
+
+table td {
+    color: #666
+}
+
+table td:last-child span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    line-height: 12px;
+    margin-right: .5rem;
+}
+
+table td:last-child span.purple {
+    background: purple;
+}
+
+table td:last-child span.red {
+    background: red;
+}
+
+table td:last-child span.yellow {
+    background: rgb(150, 150, 16);
+}
+
+/* customer area*/
+
+.customers {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-top: .7rem;
+    padding-bottom: .8rem;
+}
+
+.customer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customer-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.customer-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-info h4 {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.customer-info small {
+    font-size: 13px;
+}
+
+.customer-contact i {
+    display: inline-block;
+    color: var(--main-color);
+    margin-left: .3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.customer-contact i:hover {
+    color: var(--text-gray)
 }
